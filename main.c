@@ -2,22 +2,13 @@
 #include <stdlib.h>
 
 int main(int argc, char *argv[]){
-    unsigned int x; //변수 선언, 음수가 아닌 정수
-    int b; // 일반 정수
+    int sec;
 
-    printf("input a number : ");
-    scanf("%i", &x);
+    printf("input the second : ");
+    scanf("%i", &sec);
 
-    for (b = 0; x != 0; x >>= 1) //반복문, x라는 숫자를 끝부터 하나씩 1001을 예로 들면 1부터 0, 0, 1마다 반복
-    {
-        if (x & 1) //bit 계산, 1과 & 연산하면 1, 0과 & 연산하면 0,... => x의 이진수 끝자리가 1일때만 b++이 동작
-        {
-            b++;
-        }
-    }
-
-    printf("The result is : %i\n", b);
-
+    printf("The time for %i second is %i : %i : %i\n", sec, (sec/3600), ((sec%3600)/60), (sec%60));
+    
     system("PAUSE");
     return 0;
 }
