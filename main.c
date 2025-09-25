@@ -2,16 +2,15 @@
 #include <stdlib.h>
 
 int main(int argc, char *argv[]){
-    int x, y;
+    int x, s, m;
 
-    printf("input two integers : ");
-    scanf("%i %i", &x, &y);
+    printf("input the second : ");
+    scanf("%i", &x);
 
-    printf("+ result is %i\n", x+y);
-    printf("- result is %i\n", x-y);
-    printf("* result is %i\n", x*y);
-    printf("/ result is %i\n", x/y);
-    printf("%% result is %i\n", x%y);
+    m = x / 60;
+    s = x % 60;
+
+    printf("the time is %i : %i\n", m, s);
 
     system("PAUSE");
     return 0;
